@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
             <Link to="/contact">Contact</Link>
           </div>
           <div className="other-content">
-            <p>11 West 53 Street, New York, NY 10019</p>
+            <p>Nairobi-Namanga Rd, Kisaju, KJD, Kenya</p>
             <p>P.O.Box 25773-00100 NBI,GPO</p>
             <p>+254 707 098723</p>
             <p>+254 704 542321</p>
