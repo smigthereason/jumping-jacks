@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
     <div className="hero-container">
       <div className="left-section"></div>
       <div className="right-section">
-        <div className="top-nav">
+        <div className="top-nav1">
           <button className="subscribe-btn">Subscribe</button>
           <div className="social-icons">
             <a
@@ -56,7 +56,7 @@ const Hero: React.FC = () => {
         </div>
         <div className="content-section">
           <div className="vertical-links">
-            <Link to="/">Home</Link>
+            <Link to="/home">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/portfolio">Portfolio</Link>
             <Link to="/contact">Contact</Link>
