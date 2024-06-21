@@ -10,8 +10,14 @@ import {
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { FaXTwitter } from "react-icons/fa6";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero: React.FC = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="hero-container">
       <div className="left-section"></div>
@@ -56,12 +62,40 @@ const Hero: React.FC = () => {
         </div>
         <div className="content-section">
           <div className="vertical-links">
-            <Link to="/home">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/portfolio">Portfolio</Link>
-            <Link to="/contact">Contact</Link>
+            <Link
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              data-aos-delay="0"
+              to="/home">
+              Home
+            </Link>
+            <Link
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              data-aos-delay="0"
+              to="/about">
+              About
+            </Link>
+            <Link
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              data-aos-delay="0"
+              to="/portfolio">
+              Portfolio
+            </Link>
+            <Link
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              data-aos-delay="0"
+              to="/contact">
+              Contact
+            </Link>
           </div>
-          <div className="other-content">
+          <div
+            className="other-content"
+            data-aos="fade-in"
+            data-aos-duration="3000"
+            data-aos-delay="1000">
             <p>Nairobi-Namanga Rd, Kisaju, KJD, Kenya</p>
             <p>P.O.Box 25773-00100 NBI,GPO</p>
             <p>+254 707 098723</p>

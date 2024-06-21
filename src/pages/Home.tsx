@@ -64,7 +64,6 @@ const Home: React.FC = () => {
         <div className="tag">
         <a
               href="/"
-              target="_blank"
               rel="noopener noreferrer">
               <FaPowerOff size={32} />
             </a>

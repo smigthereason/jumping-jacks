@@ -91,6 +91,7 @@
   transition: color 0.3s ease;
   text-align: left;
   width: 50px;
+  padding: 0.2px;
 }
 
 .vertical-links a:hover {
