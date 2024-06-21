@@ -9,17 +9,19 @@ import {
 
 import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
+import AOS from "aos";
+import "aos/dist/aos.css";
 // import Tag from "../components/Tag";
 
 const Contact: React.FC = () => {
   return (
-    <div className="home-container">
+    <div className="contact-container">
       {" "}
       {/* Added a container class for styling */}
       <div className="right-section">
         {" "}
         {/* Reversed: Left to Right */}
-        <div className="name">
+        <div className="name1">
           <h2>Stephy</h2>
         </div>
         <div className="top-nav">
@@ -65,9 +67,26 @@ const Contact: React.FC = () => {
           </div>
           <button className="subscribe-btn">Subscribe</button>
         </div>
-        <div className="content_block">
-        <div className="line"></div>
-          <span className="section_subtitle">contact</span>
+        <div
+          className="contact_block"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          data-aos-delay="0"
+        >
+          <div className="contact_line">
+            <div className="line"></div>
+            <span className="section_subtitle">contact</span>
+            <div className="line2"></div>
+          </div>
+          <div className="section_block">
+            <h2 className="section_title">
+              Let's get in touch and embark on new endavours!
+            </h2>
+            <p className="contact_text">
+              I am geared and ready to to go! You can call or leave a request
+              here. I am always glad to have you here from 0900Hrs to 1800Hrs.{" "}
+            </p>
+          </div>
         </div>
       </div>
       <div className="left-section">

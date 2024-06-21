@@ -28,15 +28,15 @@
   left: 330px;
   width: 50%;
 }
-.name {
+.name1 {
   font-family: "Italianno", cursive;
   font-weight: bold;
   font-style: normal;
   font-size: 58px;
-  margin-top: 4px;
-  position: relative;
+  margin: 0 auto;
+  position: fixed;
   left: 70px;
-  bottom: 330px;
+  bottom: 345px;
 }
 .subscribe-btn {
   position: relative;
@@ -90,30 +90,57 @@
   color: #280b33;
 }
 
-.content_block {
-  position: relative;
-  top: 50px;
-  left: 50px;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
+.contact_block {
+  display: flex;
+  flex-direction: row;
   
+  margin-top: 80px; /* Adjust margin as needed */
+  gap: 20px;
+  margin-left: 80px;
+  align-items: center;
+ 
 }
 
 .line {
-    border-top-width: 4px;
-    border-top-color: #D97706; /* This is the hex value for the Tailwind color yellow-500 */
-    margin-top: 1rem; /* Equivalent to my-4 in Tailwind CSS */
-    margin-bottom: 1rem; /* Equivalent to my-4 in Tailwind CSS */
+  width: 25%; /* Adjust width as needed */
+  height: 3px; /* Adjust height as needed */
+  background-color: rgb(169, 112, 187);
+  margin-bottom: 20px; /* Gap between the line and the text */
+  position: relative;
+  top: 15px;
+}
+.line2 {
+    width: 25%; /* Adjust width as needed */
+    height: 3px; /* Adjust height as needed */
+    background-color: rgb(169, 112, 187);
+    margin-bottom: 20px; /* Gap between the line and the text */
+    position: relative;
+    top: 15px;
   }
 
-.section__subtitle {
-  display: block;
-  position: relative;
-  font: normal 600 1.6rem/1 "Poppins", sans-serif;
-  font-size: 1.6rem;
-  color: #f987d6;
-  margin-top: 1rem;
-  padding-left: 8rem;
-  margin-bottom: 3rem;
+.section_subtitle {
+  font-size: 20px; /* Adjust font size as needed */
+  color: #dd80dd; /* Adjust color as needed */
+}
+
+.section_block {
+   position: relative;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px; /* Adjust margin as needed */
+  gap: 20px;
+  right: 220px;
+
+
+}
+.section_title{
+    font-size: 2rem; /* Adjust font size as needed */
+ margin-left: 80px;
+
+}
+
+.contact_line{
+
+  
+  
 }
