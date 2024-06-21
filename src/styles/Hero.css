@@ -101,12 +101,15 @@
   margin-bottom: 5px;
   transition: color 0.3s ease;
   text-align: left;
-  width: 50px;
+  width: 210px;
   padding: 0.2px;
 }
 
 .vertical-links a:hover {
-  color: #761f88;
+  background: linear-gradient(to right, #f987d6, #6a47af 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* For other browsers */
 }
 
 .other-content {
