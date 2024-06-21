@@ -22,6 +22,10 @@ const Hero: React.FC = () => {
     <div className="hero-container">
       <div className="left-section"></div>
       <div className="right-section">
+        <video autoPlay muted loop className="background-video">
+          <source src="/src/assets/edium.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="top-nav1">
           <button className="subscribe-btn">Subscribe</button>
           <div className="social-icons">
