@@ -1,26 +1,24 @@
 import React from "react";
-import "/src/styles/Home.css"; 
+import "/src/styles/Home.css";
 import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaPowerOff,
-
 } from "react-icons/fa";
 
 import { MdEmail } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
-// import Tag from "../components/Tag";
-
 
 const Home: React.FC = () => {
   return (
-    <div className="home-container"> {/* Added a container class for styling */}
-      <div className="right-section"> {/* Reversed: Left to Right */}
-      <div className="name"><h2>Victor</h2></div>
+    <div className="home-container">
+      <div className="right-section">
+        <div className="name">
+          <h2>Victor</h2>
+        </div>
         <div className="top-nav">
           <div className="social-icons1">
-
             <a
               href="https://www.facebook.com/victor.maina.77312/"
               target="_blank"
@@ -57,19 +55,14 @@ const Home: React.FC = () => {
           </div>
           <button className="subscribe-btn">Subscribe</button>
         </div>
-
       </div>
       <div className="left-section">
         {/* Placeholder for content that was originally in the left section */}
         <div className="tag">
-        <a
-              href="/"
-              rel="noopener noreferrer">
-              <FaPowerOff size={32} />
-            </a>
-          
+          <a href="/" rel="noopener noreferrer">
+            <FaPowerOff size={32} />
+          </a>
         </div>
-        
       </div>
     </div>
   );
