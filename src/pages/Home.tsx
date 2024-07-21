@@ -57,7 +57,7 @@ const Home: React.FC = () => {
         </div>
       </div>
       <div className="left-section">
-        {/* Placeholder for content that was originally in the left section */}
+        <img src="/src/assets/50.png" alt="Me2" />
         <div className="tag">
           <a href="/" rel="noopener noreferrer">
             <FaPowerOff size={32} />

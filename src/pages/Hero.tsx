@@ -20,7 +20,9 @@ const Hero: React.FC = () => {
   }, []);
   return (
     <div className="hero-container">
-      <div className="left-section"></div>
+      <div className="left-section">
+        <img src="/src/assets/06.png" alt="Me" />
+      </div>
       <div className="right-section">
         <video autoPlay muted loop className="background-video">
           <source src="/src/assets/edium.mp4" type="video/mp4" />

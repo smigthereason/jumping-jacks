@@ -12,10 +12,10 @@
   flex-direction: column;
 }
 
-.left-section {
-  width: 33.33%;
-  background: url("/src/assets/Celebrities Looks.jpeg") no-repeat center center;
-  background-size: cover;
+.left-section img{
+  width: 100%;
+  min-height: 50vh;
+  object-fit: cover;
 }
 
 .top-nav {
