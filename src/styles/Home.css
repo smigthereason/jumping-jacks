@@ -11,11 +11,18 @@
   display: flex;
   flex-direction: column;
 }
+.left-section1{
+  width: 33.33%;
+  background-size: cover;
+  overflow-y: hidden;
 
-.left-section img{
+}
+.left-section1 img{
   width: 100%;
-  min-height: 50vh;
-  object-fit: cover;
+  min-height: 100vh;
+  object-fit:inherit;
+  position: relative;
+  bottom: 40px;
 }
 
 .top-nav {
@@ -24,9 +31,13 @@
   align-items: center;
   padding: 20px;
   margin: 10px;
-  position: relative;
+  position:sticky;
   left: 330px;
   width: 50%;
+  bottom: 10px;
+  z-index: 10;
+  
+
 }
 .name {
   font-family: "Italianno", cursive;
@@ -74,17 +85,23 @@
 .social-icons1 svg:hover {
   transform: scale(1.5);
 }
+.close{
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 10;
 
-.tag a svg{
+}
+.close a svg{
   text-decoration: none; /* Remove underline from the link */
   position: relative;
-  top: 50px;
-  left: 300px;
-  color: #130219;
+  top: 20px;
+  left: 180px;
+  color: #ebebeb;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth transitions */
 }
 
-.tag a:hover svg {
+.close a:hover svg {
   transform: scale(1.5);
   color: #280b33;
 }

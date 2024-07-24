@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="tag">
+        <div className="tag-1">
           <h2>
             Victor Maina <FaRegCopyright />
             2024{" "}
