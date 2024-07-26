@@ -29,8 +29,8 @@ const Hero: React.FC = () => {
           Your browser does not support the video tag.
         </video>
         <div className="top-nav1">
-          <button className="subscribe-btn">Subscribe</button>
-          <div className="social-icons">
+          {/* <button className="subscribe-btn">Subscribe</button> */}
+          {/* <div className="social-icons">
             <a
               href="https://www.facebook.com/victor.maina.77312/"
               target="_blank"
@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
               rel="noopener noreferrer">
               <MdEmail size={24} />
             </a>
-          </div>
+          </div> */}
         </div>
         <div className="content-section">
           <div className="vertical-links">
@@ -72,28 +72,32 @@ const Hero: React.FC = () => {
               data-aos="fade-up"
               data-aos-duration="3000"
               data-aos-delay="0"
-              to="/home">
+              to="/home"
+            >
               Home
             </Link>
             <Link
               data-aos="fade-up"
               data-aos-duration="3000"
               data-aos-delay="0"
-              to="/about">
+              to="/about"
+            >
               About
             </Link>
             <Link
               data-aos="fade-up"
               data-aos-duration="3000"
               data-aos-delay="0"
-              to="/portfolio">
+              to="/portfolio"
+            >
               Portfolio
             </Link>
             <Link
               data-aos="fade-up"
               data-aos-duration="3000"
               data-aos-delay="0"
-              to="/contact">
+              to="/contact"
+            >
               Contact
             </Link>
           </div>
@@ -101,11 +105,9 @@ const Hero: React.FC = () => {
             className="other-content"
             data-aos="fade-in"
             data-aos-duration="3000"
-            data-aos-delay="1000">
-            <p>Nairobi-Namanga Rd, Kisaju, KJD, Kenya</p>
+            data-aos-delay="1000"
+          >
             <p>P.O.Box 25773-00100 NBI,GPO</p>
-            <p>+254 707 098723</p>
-            <p>+254 704 542321</p>
             <p>
               <a href="mailto:victor.dmaina@gmail.com">
                 victor.dmaina@gmail.com
@@ -114,12 +116,13 @@ const Hero: React.FC = () => {
             <p>
               <a href="mailto:prodbysmig@gmail.com">prodbysmig@gmail.com</a>
             </p>
+            <p>+254 707 098723</p>
+            <p>+254 704 542321</p>
           </div>
         </div>
         <div className="tag-1">
           <h2>
-            Victor Maina <FaRegCopyright />
-            2024{" "}
+            Victor Maina <FaRegCopyright /> 2024{" "}
           </h2>
         </div>
       </div>
