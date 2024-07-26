@@ -3,7 +3,7 @@
     padding: 15px 30px;
     margin: 10px auto;
     font-size: 18px;
-    height: 200px;
+    height: 50px;
     font-weight: bold;
     color: #fff;
     background-color: transparent;
@@ -32,7 +32,7 @@
   }
   
   .begin-search-button:hover {
-    background-color: #8a797f73;
+    background-color: #ece2e550;
     box-shadow: 0 0 20px #ff4b4b;
   }
   

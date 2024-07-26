@@ -1,15 +1,9 @@
 import React from "react";
 import "/src/styles/Hero.css";
 import {
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaRegCopyright,
+  FaRegCopyright
 } from "react-icons/fa";
-
-import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
-import { FaXTwitter } from "react-icons/fa6";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -28,44 +22,6 @@ const Hero: React.FC = () => {
           <source src="/src/assets/edium.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div className="top-nav1">
-          {/* <button className="subscribe-btn">Subscribe</button> */}
-          {/* <div className="social-icons">
-            <a
-              href="https://www.facebook.com/victor.maina.77312/"
-              target="_blank"
-              rel="noopener noreferrer">
-              <FaFacebook size={24} />
-            </a>
-            <a
-              href="https://www.instagram.com/smigthereason/"
-              target="_blank"
-              rel="noopener noreferrer">
-              <FaInstagram size={24} />
-            </a>
-
-            <a
-              href="https://x.com/SmigDs"
-              target="_blank"
-              rel="noopener noreferrer">
-              <FaXTwitter size={24} />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/victor-maina-389318301/"
-              target="_blank"
-              rel="noopener noreferrer">
-              <FaLinkedin size={24} />
-            </a>
-
-            <a
-              href="mailto:victor.dmaina@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer">
-              <MdEmail size={24} />
-            </a>
-          </div> */}
-        </div>
         <div className="content-section">
           <div className="vertical-links">
             <Link

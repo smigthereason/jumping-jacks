@@ -12,8 +12,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
 body {
   margin: 0;
   display: flex;
@@ -22,4 +20,33 @@ body {
   min-height: 100vh;
 }
 
+/* For webkit-based browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 20px; /* Reduced width of the vertical scrollbar */
+  height: 5px; /* Reduced height of the horizontal scrollbar */
+}
 
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: purple;
+  border-radius: 2px; /* Rounded corners for the thumb */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: purple transparent;
+}
+
+/* Hide scrollbar buttons for vertical scrollbars */
+::-webkit-scrollbar-button:horizontal {
+  display: none;
+}
+
+/* Hide scrollbar buttons for horizontal scrollbars */
+::-webkit-scrollbar-button:horizontal {
+  display: none;
+}
