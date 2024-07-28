@@ -44,9 +44,10 @@ nav {
   position: relative;
   right: 15px;
   top: 22px;
+  color: #fff;
 }
 
-.social-icons svg {
+.social-icons  {
   color: #fff;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
