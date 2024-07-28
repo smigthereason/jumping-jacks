@@ -1,6 +1,7 @@
 import React from "react";
 import "/src/styles/Contact.css";
 import Header from "../components/Header";
+import LineHead from "../components/LineHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -43,11 +44,7 @@ const Contact: React.FC = () => {
             data-aos-duration="3000"
             data-aos-delay="0"
           >
-            <div className="contact_line">
-              <div className="line"></div>
-              <span className="section_subtitle">contact</span>
-              <div className="line2"></div>
-            </div>
+            <LineHead title="contact" />
             <div className="section_block">
               <h2 className="section_title">
                 Let's get in touch and embark on new endeavours!
@@ -95,4 +92,8 @@ const LocationIcon = () => <div>📍</div>;
 const HeartIcon = () => <div>❤️</div>;
 const RocketIcon = () => <div>🚀</div>;
 
+<<<<<<< HEAD
 export default Contact;
+=======
+export default Contact;
+>>>>>>> f728e895286d13496820833ad8615481be53efea

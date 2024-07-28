@@ -1,7 +1,7 @@
 import React from "react";
 import "/src/styles/About.css"; 
 import Header from "../components/Header";
-
+import LineHead from "../components/LineHead";
 
 
 const About: React.FC = () => {
@@ -9,6 +9,7 @@ const About: React.FC = () => {
     <div className="home-container"> {/* Added a container class for styling */}
       <div className="right-section"> {/* Reversed: Left to Right */}
       <Header />
+      <LineHead title="about me" />
 
       </div>
       <div className="left-section">

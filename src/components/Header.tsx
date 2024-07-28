@@ -1,12 +1,14 @@
 import React from "react";
 import "/src/styles/Header.css";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { TiThMenuOutline } from "react-icons/ti";
 import { MdEmail } from "react-icons/md";
+import { TiArrowForwardOutline } from "react-icons/ti";
+
 
 const Header: React.FC = () => {
   return (
     <nav className="head">
+  
       <div className="name">
         <h2>Victor</h2>
       </div>
@@ -35,12 +37,13 @@ const Header: React.FC = () => {
             <FaGithub size={24} />
           </a>
           <a href="/" rel="noopener noreferrer">
-            <TiThMenuOutline size={24} />
+          <TiArrowForwardOutline  size={24} />
           </a>
         </div>
         {/* <button className="subscribe-btn">GitHub</button> */}
         <div className="close"></div>
       </div>
+      
     </nav>
   );
 };
