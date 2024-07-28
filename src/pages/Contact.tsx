@@ -1,8 +1,25 @@
 import React from "react";
 import "/src/styles/Contact.css";
 import Header from "../components/Header";
+import LineHead from "../components/LineHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
+
+interface CardProps {
+  icon: React.ReactNode;
+  title: string;
+  content: string[];
+}
+
+const Card: React.FC<CardProps> = ({ icon, title, content }) => (
+  <div className="card">
+    <div className="card-icon">{icon}</div>
+    <h2>{title}</h2>
+    {content.map((item, index) => (
+      <p key={index}>{item}</p>
+    ))}
+  </div>
+);
 
 const Contact: React.FC = () => {
   React.useEffect(() => {
@@ -27,70 +44,37 @@ const Contact: React.FC = () => {
             data-aos-duration="3000"
             data-aos-delay="0"
           >
-            <div className="contact_line">
-              <div className="line"></div>
-              <span className="section_subtitle">contact</span>
-              <div className="line2"></div>
-            </div>
+            <LineHead title="contact" />
             <div className="section_block">
               <h2 className="section_title">
                 Let's get in touch and embark on new endeavours!
               </h2>
-
-              <div className="container">
-                <div className="grid">
-                  <div className="card">
-                    <div className="card-image">
-                      <img
-                        src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-                        alt="Woman in white dress"
-                      />
-                    </div>
-                    <div className="card-overlay"></div>
-                    <div className="card-content">
-                      <h1>Beauty</h1>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis dolore adipisci placeat.
-                      </p>
-                      <button>See More</button>
-                    </div>
-                  </div>
-                  <div className="card">
-                    <div className="card-image">
-                      <img
-                        src="https://images.unsplash.com/photo-1494145904049-0dca59b4bbad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
-                        alt="Person wearing denim jacket"
-                      />
-                    </div>
-                    <div className="card-overlay"></div>
-                    <div className="card-content">
-                      <h1>Beyond Builder</h1>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis dolore adipisci placeat.
-                      </p>
-                      <button>See More</button>
-                    </div>
-                  </div>
-                  <div className="card">
-                    <div className="card-image">
-                      <img
-                        src="https://images.unsplash.com/photo-1502675135487-e971002a6adb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80"
-                        alt="Person in white dress on beach"
-                      />
-                    </div>
-                    <div className="card-overlay"></div>
-                    <div className="card-content">
-                      <h1>Shooting Star</h1>
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Facilis dolore adipisci placeat.
-                      </p>
-                      <button>See More</button>
-                    </div>
-                  </div>
-                </div>
+              <div className="cards-container">
+                <Card
+                  icon={<LocationIcon />}
+                  title="Location"
+                  content={[
+                    "11 West 53 Street",
+                    "New York, NY 10019",
+                    "3400 Broadway,",
+                    "Oakland, CA 94611"
+                  ]}
+                />
+                <Card
+                  icon={<HeartIcon />}
+                  title="Follow us"
+                  content={["Facebook", "Instagram", "Twitter", "Pinterest"]}
+                />
+                <Card
+                  icon={<RocketIcon />}
+                  title="Contact"
+                  content={[
+                    "+1 212-708-9400",
+                    "+1 510-457-0211",
+                    "hello@marvio.com",
+                    "support@marvio.com"
+                  ]}
+                />
               </div>
             </div>
           </div>
@@ -102,5 +86,10 @@ const Contact: React.FC = () => {
     </div>
   );
 };
+
+// Placeholder icon components
+const LocationIcon = () => <div>📍</div>;
+const HeartIcon = () => <div>❤️</div>;
+const RocketIcon = () => <div>🚀</div>;
 
 export default Contact;
