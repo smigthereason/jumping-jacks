@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import LineHead from "../components/LineHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ContactForm from "../components/ContactForm";
 
 interface CardProps {
   icon: React.ReactNode;
@@ -46,9 +47,11 @@ const Contact: React.FC = () => {
           >
             <LineHead title="contact" />
             <div className="section_block">
-              <h2 className="section_title">
-                Let's get in touch and embark on new endeavours!
-              </h2>
+              <div className="sub_title">
+                <h2 className="section_title">
+                  Let's get in touch and embark on new endeavours!
+                </h2>
+              </div>
               <div className="cards-container">
                 <Card
                   icon={<LocationIcon />}
@@ -57,7 +60,7 @@ const Contact: React.FC = () => {
                     "11 West 53 Street",
                     "New York, NY 10019",
                     "3400 Broadway,",
-                    "Oakland, CA 94611"
+                    "Oakland, CA 94611",
                   ]}
                 />
                 <Card
@@ -72,9 +75,12 @@ const Contact: React.FC = () => {
                     "+1 212-708-9400",
                     "+1 510-457-0211",
                     "hello@marvio.com",
-                    "support@marvio.com"
+                    "support@marvio.com",
                   ]}
                 />
+              </div>
+              <div className="form_block">
+                <ContactForm />
               </div>
             </div>
           </div>
@@ -92,8 +98,4 @@ const LocationIcon = () => <div>📍</div>;
 const HeartIcon = () => <div>❤️</div>;
 const RocketIcon = () => <div>🚀</div>;
 
-<<<<<<< HEAD
 export default Contact;
-=======
-export default Contact;
->>>>>>> f728e895286d13496820833ad8615481be53efea

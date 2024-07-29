@@ -19,27 +19,6 @@
   background-size: cover;
 }
 
-
-/* .subscribe-btn {
-  position: relative;
-  top: 20px;
-  background-color: transparent;
-  color: #f3f3f3;
-  border: 2px solid #ebebeb;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 30px;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  box-shadow: 0 0 3px rgba(255, 255, 255, 0.8);
-}
-
-.subscribe-btn:hover {
-  background-color: #ffffff;
-  color: #130219;
-} */
-
-
 .contact_block {
   display: flex;
   flex-direction: row;
@@ -50,23 +29,18 @@
   align-items: center;
 }
 
-
-
-
 .section_block {
   position: relative;
   flex-direction: column;
   align-items: center;
   margin-top: 80px; /* Adjust margin as needed */
   gap: 10px;
-  right: 220px;
+  right: 216px;
 }
 .section_title {
   font-size: 2rem; /* Adjust font size as needed */
   margin-left: 250px;
 }
-
-
 
 .container {
   text-align: center;
@@ -79,7 +53,6 @@
   /* grid-template-columns: repeat(auto-fit, minmax(200px,  1fr)); */
   margin-left: 200px;
   grid-auto-rows: 360px;
-
 }
 
 .cards-container {
@@ -90,7 +63,9 @@
   padding: 20px;
   width: 100%;
   max-width: 900px; /* Adjust this value based on your layout */
-  margin: 80px; /* Center the container itself */
+  margin: 80px 0 0 100px; /* Center the container itself */
+  position: relative;
+  left: 50px;
 }
 
 .card {
