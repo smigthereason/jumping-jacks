@@ -3,6 +3,9 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-left: 200px;
+    position: relative;
+    top: 60px;
+    left: 40px;
   }
   
   .form-group {
