@@ -43,7 +43,6 @@
 .contact_block {
   display: flex;
   flex-direction: row;
-
   margin-top: 80px; /* Adjust margin as needed */
   gap: 20px;
   margin-left: 80px;
