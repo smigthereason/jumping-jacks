@@ -18,18 +18,67 @@
   background-size: cover;
 }
 
-.tag a svg{
-  text-decoration: none; /* Remove underline from the link */
-  position: relative;
-  top: 50px;
-  left: 300px;
-  color: #130219;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out; /* Smooth transitions */
+.portfolio {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
 }
 
-.tag a:hover svg {
-  transform: scale(1.5);
-  color: #280b33;
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.project-card {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 30%;
+  text-align: center;
+}
+
+.project-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: #444;
+  margin: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .project-container {
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .vertical-line {
+    display: none;
+  }
 }
 
 
