@@ -65,17 +65,17 @@ const Contact: React.FC = () => {
                 />
                 <Card
                   icon={<HeartIcon />}
-                  title="Follow us"
-                  content={["Facebook", "Instagram", "Twitter", "Pinterest"]}
+                  title="Follow me"
+                  content={["Github", "LinkedIn", "Twitter", "Facebook" ]}
                 />
                 <Card
                   icon={<RocketIcon />}
                   title="Contact"
                   content={[
-                    "+1 212-708-9400",
-                    "+1 510-457-0211",
-                    "hello@marvio.com",
-                    "support@marvio.com",
+                    "+254 707 09 8723",
+                    "+254 704 542321",
+                    "victor.dmaina@gmail.com",
+                    "victor.dmaina@gmail.com",
                   ]}
                 />
               </div>
