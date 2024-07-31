@@ -5,11 +5,22 @@ import LineHead from "../components/LineHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import ContactForm from "../components/ContactForm";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { FaSquareXTwitter } from "react-icons/fa6";
+
+import { FaFacebook } from "react-icons/fa";
+
+// Define link constants
+const LINKEDIN_URL = "https://www.linkedin.com/in/victor-maina-389318301/";
+const GITHUB_URL = "mailto:victor.dmaina@gmail.com";
+const FACEBOOK_URL = "https://www.facebook.com/victor.maina.1/";
+const TWITTER_URL = "https://twitter.com/victor_maina";
 
 interface CardProps {
   icon: React.ReactNode;
   title: string;
-  content: string[];
+  content: React.ReactNode[];
 }
 
 const Card: React.FC<CardProps> = ({ icon, title, content }) => (
@@ -66,8 +77,106 @@ const Contact: React.FC = () => {
                 <Card
                   icon={<HeartIcon />}
                   title="Follow me"
-                  content={["Github", "LinkedIn", "Twitter", "Facebook" ]}
+                  content={[
+                    <div
+                      key="linkedin"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: "100%",
+                      }}
+                    >
+                      <a
+                        href={LINKEDIN_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          textDecoration: "none",
+                          color: "inherit",
+                        }}
+                      >
+                        <FaLinkedin size={24} />
+                        <span style={{ marginLeft: "8px" }}>LinkedIn</span>
+                      </a>
+                    </div>,
+                    <div
+                      key="twitter"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: "100%",
+                      }}
+                    >
+                      <a
+                        href={TWITTER_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          textDecoration: "none",
+                          color: "inherit",
+                        }}
+                      >
+                        <FaSquareXTwitter size={24} />
+                        <span style={{ marginLeft: "8px" }}>Twitter</span>
+                      </a>
+                    </div>,
+                    <div
+                      key="facebook"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: "100%",
+                      }}
+                    >
+                      <a
+                        href={FACEBOOK_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          textDecoration: "none",
+                          color: "inherit",
+                        }}
+                      >
+                        <FaFacebook size={24} />
+                        <span style={{ marginLeft: "8px" }}>Facebook</span>
+                      </a>
+                    </div>,
+                    <div
+                      key="github"
+                      style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        height: "100%",
+                      }}
+                    >
+                      <a
+                        href={GITHUB_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          textDecoration: "none",
+                          color: "inherit",
+                        }}
+                      >
+                        <FaGithub size={24} />
+                        <span style={{ marginLeft: "10px" }}>GitHub</span>
+                      </a>
+                    </div>,
+                  ]}
                 />
+
                 <Card
                   icon={<RocketIcon />}
                   title="Contact"

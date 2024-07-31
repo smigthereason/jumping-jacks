@@ -114,3 +114,42 @@
     margin-bottom: 20px;
   }
 }
+
+
+.other-content {
+  text-align: right;
+  position: relative;
+  top: 180px;
+  color: white;
+}
+
+.other-content p {
+  margin: 0;
+  padding: 10px 35px;
+}
+
+.other-content a {
+  text-decoration: none;
+  position: relative;
+  color: white;
+}
+
+.other-content a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #d1a6da;
+  transition: width 0.5s ease-in-out;
+}
+
+.other-content a:hover {
+  color: rgb(255, 255, 255);
+  background: none;
+}
+
+.other-content a:hover::after {
+  width: 100%;
+}
