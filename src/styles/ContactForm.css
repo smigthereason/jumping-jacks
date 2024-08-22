@@ -28,6 +28,7 @@
   
   .full-width {
     grid-column: span 2;
+    height: 100px;
   }
   
   .contact-form button {
