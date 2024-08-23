@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
 .portfolio-container {
   display: flex;
   height: 100vh;
   width: 100%;
   overflow-x: hidden;
-
 }
 
 .right-section {
@@ -13,7 +11,6 @@
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-
 }
 
 .left-section {
@@ -28,24 +25,10 @@
   margin-top: 50px;
 }
 
-.timeline {
-  position: relative;
-  padding-left: 50px;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: #ffffff3a;
-}
-
 .experience-card {
   position: relative;
   margin-bottom: 2rem;
+  text-align: center; /* Center-align the content */
 }
 
 .card-content {
@@ -53,13 +36,21 @@
   border-radius: 4px;
   padding: 1.5rem;
   box-shadow: 0 10px 30px -15px rgba(252, 252, 252, 0.253);
+  padding-top: 4rem; /* Add space at the top for the logo */
 }
 
 .logo-container {
   position: absolute;
-  left: -65px;
-  top: 0;
+  top: -40px; /* Position the logo above the card */
+  left: 50%;
+  transform: translateX(-50%); /* Center the logo horizontally */
+  background-color: #130219;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
 }
+
+
 
 .logo {
   width: 40px;
@@ -72,8 +63,7 @@
   color: #64ffda;
   font-weight: bold;
 }
-
-.timeline-dot {
+/* .timeline-dot {
   position: absolute;
   left: -54px;
   top: 8px;
@@ -81,7 +71,7 @@
   height: 5px;
   border-radius: 50%;
   background-color: #ffffff;
-}
+} */
 
 h3 {
   color: #ccd6f6;
@@ -119,10 +109,6 @@ p {
 @media (max-width: 768px) {
   .timeline {
     padding-left: 30px;
-  }
-  
-  .logo-container {
-    left: -45px;
   }
   
   .timeline-dot {

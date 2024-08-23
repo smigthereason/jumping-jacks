@@ -43,26 +43,26 @@ const Portfolio: React.FC = () => {
         "JavaScript",
       ],
     },
-    {
-      logo: "../assets/winklogopic.png",
-      title: "Frontend Engineer Intern",
-      company: "Neurobit",
-      date: "June 2023 - Nov 2023",
-      description: [
-        "Enhanced user experiences on Neurobit PSG & Hybrid Portals by resolving bugs & reduced load time by 40%.",
-        "Built Neurobit Analytics portal using React Js with seamless interaction of REST APIs using AXIOS optimized with React Query.",
-        "Refactored previous code to TypeScript, updated with new dependency and integrated Vite with Jest for Unit Testing.",
-      ],
-      skills: [
-        "ReactJS",
-        "Redux",
-        "NodeJs",
-        "Material UI",
-        "HTML",
-        "CSS",
-        "JavaScript",
-      ],
-    },
+    // {
+    //   logo: "../assets/winklogopic.png",
+    //   title: "Frontend Engineer Intern",
+    //   company: "Neurobit",
+    //   date: "June 2023 - Nov 2023",
+    //   description: [
+    //     "Enhanced user experiences on Neurobit PSG & Hybrid Portals by resolving bugs & reduced load time by 40%.",
+    //     "Built Neurobit Analytics portal using React Js with seamless interaction of REST APIs using AXIOS optimized with React Query.",
+    //     "Refactored previous code to TypeScript, updated with new dependency and integrated Vite with Jest for Unit Testing.",
+    //   ],
+    //   skills: [
+    //     "ReactJS",
+    //     "Redux",
+    //     "NodeJs",
+    //     "Material UI",
+    //     "HTML",
+    //     "CSS",
+    //     "JavaScript",
+    //   ],
+    // },
     // Add more experiences as needed
   ];
 
@@ -86,7 +86,7 @@ const Portfolio: React.FC = () => {
                   <div
                     className="experience-card"
                     key={index}
-                    data-aos="slide-left"
+                    data-aos="slide-up" // Changed to slide-up for bottom-to-top animation
                     data-aos-delay={`${index * 1000}`} // Adjusting delay to 1 second intervals
                   >
                     <div className="card-content">
