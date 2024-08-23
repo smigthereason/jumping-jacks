@@ -117,18 +117,19 @@ body, html {
   margin: 0;
   padding: 0;
   overflow: hidden; /* Prevent scrolling on the entire page */
+  height: 100%;
+  width: 100%;
 }
 
 .hero-container {
   display: flex;
   height: 100vh;
   width: 100%;
-  overflow-y: hidden;
 }
 
 .left-section img {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   object-fit: cover;
 }
 
@@ -138,7 +139,7 @@ body, html {
   flex-direction: column;
   z-index: 10;
   position: relative;
-  overflow-y: hidden; /* Hide scrollbar */
+  overflow: hidden; /* No overflow in this section */
 }
 
 .background-video {
@@ -157,6 +158,7 @@ body, html {
   flex-grow: 1;
   position: relative;
   bottom: 70px;
+  overflow: hidden; /* Ensure no overflow here */
 }
 
 .vertical-links {
