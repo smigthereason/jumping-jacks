@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
             <div className="section_block">
               <div className="sub_title">
                 <h2 className="section_title">
-                  Let's get in touch and embark on new endeavours!
+                  Let's get in touch and embark on new endeavors!
                 </h2>
               </div>
               <div className="cards-container">

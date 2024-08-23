@@ -24,7 +24,7 @@ const About: React.FC = () => {
           data-aos-duration="3000"
           data-aos-delay="0"
         >
-          <LineHead title="about me" />
+          <LineHead title="about me"/>
           <div className="main-content">
             <div className="content1">
               <p className="center-text">
