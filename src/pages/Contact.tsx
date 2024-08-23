@@ -6,7 +6,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ContactForm from "../components/ContactForm";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 import { FaSquareXTwitter } from "react-icons/fa6";
 
 import { FaFacebook } from "react-icons/fa";
@@ -43,11 +42,11 @@ const Contact: React.FC = () => {
       <div className="right-section">
         <div
           className="scrollable-container"
-          style={{
-            height: "auto",
-            overflowY: "auto",
-            padding: "10px",
-          }}
+          // style={{
+          //   height: "auto",
+          //   overflowY: "auto",
+          //   padding: "10px",
+          // }}
         >
           <Header />
           <div

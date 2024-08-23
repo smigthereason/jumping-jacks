@@ -137,6 +137,8 @@
   flex-direction: column;
   overflow-y: auto;
   max-height: 100vh;
+  padding: 10px;
+
 }
 
 .left-section {

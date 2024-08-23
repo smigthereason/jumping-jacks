@@ -32,12 +32,14 @@ const Home: React.FC = () => {
             overflowY: "hidden",
             padding: "10px",
           }}
-          data-aos="fade-up"
-          data-aos-duration="3000"
-          data-aos-delay="0"
         >
-          <div className="home_block">
-          <LineHead title="Home" />
+          <div
+            className="home_block"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            data-aos-delay="0"
+          >
+            <LineHead title="Home" />
             <div className="title_block">
               <h1 className="title">
                 My name is Stephy.
