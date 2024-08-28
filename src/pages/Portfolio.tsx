@@ -8,8 +8,7 @@ import "aos/dist/aos.css";
 interface ExperienceCard {
   logo: string;
   title: string;
-  company: string;
-  date: string;
+  product: string;
   description: string[];
   skills: string[];
 }
@@ -24,46 +23,69 @@ const Portfolio: React.FC = () => {
 
   const experiences: ExperienceCard[] = [
     {
-      logo: "../assets/kindr-logo-white.png",
-      title: "Frontend Engineer Intern",
-      company: "Neurobit",
-      date: "June 2023 - Nov 2023",
+      logo: "/src/assets/logos/kindr-logo.png",
+      title: "Full-Stack Developer",
+      product: "Kindr",
       description: [
-        "Enhanced user experiences on Neurobit PSG & Hybrid Portals by resolving bugs & reduced load time by 40%.",
-        "Built Neurobit Analytics portal using React Js with seamless interaction of REST APIs using AXIOS optimized with React Query.",
-        "Refactored previous code to TypeScript, updated with new dependency and integrated Vite with Jest for Unit Testing.",
+        "",
+        "",
+        "",
+        "",
+        "",
+        
+      ],
+    skills: [
+      "ReactJS",
+      "HTML",
+      "CSS",
+      "Tailwind",
+      "Vite",
+      "TypeScript",
+      "Flask",
+      "SQLAlchemy",
+      "Python",
+    ], 
+  },
+    {
+      logo: "/src/assets/logos/wink-transparent.png",
+      title: "Full-Stack Developer",
+      product: "Wink",
+      description: [
+        "Enhanced user experiences on Wink by resolving bugs & reduced load time by 40%.",
+        "Built the API and database using Flask, SQLAlchemy, and Python.",
+        "Refactored previous code to TypeScript.",
+        "Created the frontend design and graphical interface using React",
+        "Integrated payment plans through PayPal for seamless transactions.",
+        
+      ],
+    skills: [
+      "ReactJS",
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "Flask",
+      "SQLAlchemy",
+      "Python",
+    ], 
+  },
+    {
+      logo: "/src/assets/logos/av-high.png",
+      title: "Frontend Engineer",
+      product: "AnimeVerse",
+      description: [
+        "A Comprehensive Anime and Manga Information Portal.",
+        "Built AnimeVerse portal using React Js with seamless interaction of REST APIs using AXIOS optimized with React Query.",
+
+
       ],
       skills: [
         "ReactJS",
-        "Redux",
-        "NodeJs",
-        "Material UI",
         "HTML",
         "CSS",
         "JavaScript",
       ],
     },
-    // {
-    //   logo: "../assets/winklogopic.png",
-    //   title: "Frontend Engineer Intern",
-    //   company: "Neurobit",
-    //   date: "June 2023 - Nov 2023",
-    //   description: [
-    //     "Enhanced user experiences on Neurobit PSG & Hybrid Portals by resolving bugs & reduced load time by 40%.",
-    //     "Built Neurobit Analytics portal using React Js with seamless interaction of REST APIs using AXIOS optimized with React Query.",
-    //     "Refactored previous code to TypeScript, updated with new dependency and integrated Vite with Jest for Unit Testing.",
-    //   ],
-    //   skills: [
-    //     "ReactJS",
-    //     "Redux",
-    //     "NodeJs",
-    //     "Material UI",
-    //     "HTML",
-    //     "CSS",
-    //     "JavaScript",
-    //   ],
-    // },
-    // Add more experiences as needed
+    
   ];
 
   return (
@@ -78,7 +100,7 @@ const Portfolio: React.FC = () => {
         >
           <LineHead title="portfolio" />
           <div className="portfolio">
-            <h1>Let's get in touch and embark on new endeavours!</h1>
+            <h1>Let's get in touch and embark on new endeavors!</h1>
 
             <div className="portfolio">
               <div className="timeline">
@@ -91,16 +113,16 @@ const Portfolio: React.FC = () => {
                   >
                     <div className="card-content">
                       <div className="logo-container">
-                        <img src={exp.logo} alt={`${exp.company} logo`} className="logo" />
+                        <img src={exp.logo} alt={`${exp.product} logo`} className="logo" />
                       </div>
                       <h3>{exp.title}</h3>
-                      <h4>{exp.company}</h4>
-                      <p className="date">{exp.date}</p>
+                      <h4>{exp.product}</h4>
                       {exp.description.map((desc, i) => (
                         <p key={i}>{desc}</p>
                       ))}
                       <div className="skills">
-                        <strong>Skills:</strong> {exp.skills.join(" • ")}
+                        <h3>Skills:</h3> 
+                        <p>{exp.skills.join(" • ")}</p>
                       </div>
                     </div>
                     <div className="timeline-dot"></div>
