@@ -150,3 +150,10 @@ h1{
   gap: 20px;
 }
 
+.home-container {
+  transition: transform 1.5s ease-in-out; /* Adjust to match your AOS settings */
+}
+
+.slide-left {
+  transform: translateX(-100%);
+}
