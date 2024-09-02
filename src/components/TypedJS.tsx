@@ -8,7 +8,7 @@ interface TypedJSProps {
   loop?: boolean;
 }
 
-const TypedJS: React.FC<TypedJSProps> = ({ strings, typeSpeed = 150, backSpeed = 200, loop = true }) => {
+const TypedJS: React.FC<TypedJSProps> = ({ strings, typeSpeed = 100, backSpeed = 150, loop = true }) => {
   const el = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {

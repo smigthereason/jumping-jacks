@@ -11,15 +11,7 @@ const Home: React.FC = () => {
   React.useEffect(() => {
     AOS.init();
   }, []);
-  const categories = [
-    "Designer",
-    "Developer",
-    "Lover",
-    "Treasure",
-    "Beauty",
-    "Gift",
-    "Darling",
-  ];
+  const categories = ["Full Stack Web-Developer.", "Ui/Ux Designer." ];
 
   return (
     <div className="home-container">
@@ -42,7 +34,7 @@ const Home: React.FC = () => {
             <LineHead title="Home" />
             <div className="title_block">
               <h1 className="title">
-                My name is Stephy.
+                My name is Victor.
                 <br />
                 I am a <br /> <TypedJS strings={categories} />
               </h1>

@@ -1,4 +1,4 @@
-.portfolio-container {
+/* .portfolio-container {
   display: flex;
   height: 100vh;
   width: 100%;
@@ -23,12 +23,13 @@
   color: #ffffff;
   padding: 2rem;
   margin-top: 50px;
+  
 }
 
 .experience-card {
   position: relative;
   margin-bottom: 2rem;
-  text-align: center; /* Center-align the content */
+  text-align: center; 
 }
 
 .card-content {
@@ -37,14 +38,14 @@
   border-radius: 20px;
   padding: 1.5rem;
   box-shadow: 0 10px 30px -15px rgba(252, 252, 252, 0.253);
-  padding-top: 4rem; /* Add space at the top for the logo */
+  padding-top: 4rem; 
 }
 
 .logo-container {
   position: absolute;
-  top: -40px; /* Position the logo above the card */
+  top: -40px; 
   left: 50%;
-  transform: translateX(-50%); /* Center the logo horizontally */
+  transform: translateX(-50%); 
   background-color: #130219;
   padding: 10px;
   border-radius: 50%;
@@ -64,15 +65,7 @@
   color: #64ffda;
   font-weight: bold;
 }
-/* .timeline-dot {
-  position: absolute;
-  left: -54px;
-  top: 8px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #ffffff;
-} */
+
 
 h3 {
   color: #ccd6f6;
@@ -115,4 +108,122 @@ p {
   .timeline-dot {
     left: -34px;
   }
+} */
+
+.portfolio-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
+
+.right-section {
+  width: 66.67%;
+  background-color: #130219;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.left-section {
+  width: 33.33%;
+  background: url("/src/assets/Celebrities Looks.jpeg") no-repeat center center;
+  background-size: cover;
+}
+
+.portfolio {
+  color: #ffffff;
+  padding: 2rem;
+  margin-top: 50px;
+}
+
+.timeline {
+  display: flex;
+  position: relative;
+  top: 50px;
+  flex-direction: column;
+  gap: 4rem; /* Add gap between the experience cards */
+}
+
+.experience-card {
+  position: relative;
+  text-align: center;
+  margin: 0 auto; /* Center the cards */
+  max-width: 700px; /* Optional: Set a max-width for each card */
+}
+
+.card-content {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px -15px rgba(252, 252, 252, 0.253);
+  padding-top: 4rem;
+}
+
+.logo-container {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #130219;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64ffda;
+  font-weight: bold;
+}
+
+h3 {
+  color: #ccd6f6;
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+h4 {
+  color: #64ffda;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: #a8b2d1;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.skills {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.skills strong {
+  color: #ccd6f6;
+}
+
+/* @media (max-width: 768px) {
+  .timeline {
+    padding-left: 30px;
+  }
+  
+  .timeline-dot {
+    left: -34px;
+  }
+} */
+
