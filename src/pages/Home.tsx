@@ -1,22 +1,36 @@
-// import React from "react";
-// import "/src/styles/Home.css";
+// import React, { useState, useEffect } from "react";
 // import AOS from "aos";
 // import "aos/dist/aos.css";
 // import TypedJS from "../components/TypedJS";
 // import Button from "../components/Button";
 // import Header from "../components/Header";
 // import LineHead from "../components/LineHead";
+// import "/src/styles/Home.css";
+// import { useNavigate } from "react-router-dom";
 
 // const Home: React.FC = () => {
-//   React.useEffect(() => {
+//   const [slideOut, setSlideOut] = useState<boolean>(false);
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
 //     AOS.init();
 //   }, []);
-//   const categories = ["Full Stack Web-Developer.", "Ui/Ux Designer." ];
+
+//   const categories = ["Full Stack Web-Developer.", "UI/UX Designer."];
+
+//   const handleHomeRedirect = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+//     e.preventDefault();
+//     setSlideOut(true);
+
+//     setTimeout(() => {
+//       navigate("/");
+//     }, 500); // Adjust the duration to match your AOS animation duration
+//   };
 
 //   return (
-//     <div className="home-container">
+//     <><div className={`home-container ${slideOut ? "slide-left" : ""}`}>
 //       <div className="right-section">
-//         <Header />
+//         <Header onHomeRedirect={handleHomeRedirect} />
 //         <div
 //           className="scrollable-container"
 //           style={{
@@ -47,22 +61,22 @@
 //                 </div>
 //                 <div className="info-box">
 //                   <span className="info-number">1.5k+</span>
-//                   <span className="info-text">Hours of Waka Time</span>
-//                 </div>
+//                 <span className="info-text">Hours of Waka Time</span>
 //               </div>
-//               <div className="download-cv">
-//                 <Button />
-//               </div>
+//             </div>
+//             <div className="download-cv">
+//               <Button />
 //             </div>
 //           </div>
 //         </div>
 //       </div>
-//       <div className="left-section1">
+//     </div><div className="left-section1">
 //         <div className="close">
 //           <img src="/src/assets/50.png" alt="Me2" />
 //         </div>
 //       </div>
-//     </div>
+//       </div>
+//       </>
 //   );
 // };
 
@@ -93,12 +107,12 @@ const Home: React.FC = () => {
     setSlideOut(true);
 
     setTimeout(() => {
-      navigate("/");
-    }, 500); // Adjust the duration to match your AOS animation duration
+      navigate("/"); // Change this to your Hero route
+    }, 1000); // Match AOS animation duration
   };
 
   return (
-    <><div className={`home-container ${slideOut ? "slide-left" : ""}`}>
+     <div className={`home-container ${slideOut ? "slide-left" : ""}`}>
       <div className="right-section">
         <Header onHomeRedirect={handleHomeRedirect} />
         <div
@@ -131,25 +145,24 @@ const Home: React.FC = () => {
                 </div>
                 <div className="info-box">
                   <span className="info-number">1.5k+</span>
-                <span className="info-text">Hours of Waka Time</span>
+                  <span className="info-text">Hours of Waka Time</span>
+                </div>
               </div>
-            </div>
-            <div className="download-cv">
-              <Button />
+              <div className="download-cv">
+                <Button />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div><div className="left-section1">
+      <div className="left-section1">
         <div className="close">
           <img src="/src/assets/50.png" alt="Me2" />
         </div>
       </div>
-      </div>
-      </>
+    </div>
   );
 };
 
 export default Home;
-
 

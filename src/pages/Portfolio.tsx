@@ -141,12 +141,14 @@
 
 // export default Portfolio;
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "/src/styles/Portfolio.css";
 import Header from "../components/Header";
 import LineHead from "../components/LineHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useNavigate } from "react-router-dom";
+
 
 interface ExperienceCard {
   logo: string;
@@ -157,12 +159,24 @@ interface ExperienceCard {
 }
 
 const Portfolio: React.FC = () => {
+  const [slideOut, setSlideOut] = useState<boolean>(false);
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({
       duration: 3000,
       once: true,
     });
   }, []);
+  const handleHomeRedirect = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    setSlideOut(true);
+
+    setTimeout(() => {
+      navigate("/");
+    }, 500); // Adjust the duration to match your AOS animation duration
+  };
+  
 
   const experiences: ExperienceCard[] = [
     {
@@ -216,9 +230,9 @@ const Portfolio: React.FC = () => {
   ];
 
   return (
-    <div className="home-container">
+    <><div className={`home-container ${slideOut ? "slide-left" : ""}`}>
       <div className="right-section">
-        <Header />
+      <Header onHomeRedirect={handleHomeRedirect} />
         <div
           className="about-container"
           data-aos="fade-up"
@@ -230,7 +244,7 @@ const Portfolio: React.FC = () => {
             <h1>Let's get in touch and embark on new endeavors!</h1>
 
             <div className="timeline">
-              {experiences.map((exp, index) => (
+              {experiences.map((exp) => (
                 <div
                   className="experience-card"
                   // key={index}
@@ -266,6 +280,7 @@ const Portfolio: React.FC = () => {
         <div className="tag"></div>
       </div>
     </div>
+    </>
   );
 };
 
