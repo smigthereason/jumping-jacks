@@ -29,6 +29,8 @@ body, html {
   position: relative;
   z-index: 10;
   overflow: hidden;
+  background-color: #1302198c;
+
 }
 
 /* Background video settings */
