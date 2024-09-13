@@ -30,7 +30,6 @@ body, html {
   z-index: 10;
   overflow: hidden;
   background-color: #1302198c;
-
 }
 
 /* Background video settings */
@@ -88,20 +87,21 @@ body, html {
   text-align: right;
   position: relative;
   color: white;
-  flex: 1; /* Allows it to grow equally */
-  padding-right: 3vw;
-  top: 30vh; /* Align with vertical links */
+  flex: 1;
+  padding-right: 2vw;
+  top: 30vh;
 }
-
 
 .other-content p {
   margin: 0;
-  padding: 1vh 2vw; /* Adjusted padding to viewport units */
+  padding: 1vh 2vw;
 }
 
 .other-content a {
   text-decoration: none;
   color: white;
+  position: relative;
+  display: inline-block;
 }
 
 .other-content a::after {

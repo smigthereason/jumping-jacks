@@ -19,10 +19,7 @@ const Hero: React.FC = () => {
         <img src="/src/assets/06.png" alt="Me" />
       </div>
       <div className="right-section">
-        <video autoPlay muted loop className="background-video">
-          <source src="https://cdn.pixabay.com/video/2021/11/20/98511-649310767_large.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        
         <div className="content-section">
           <div className="vertical-links">
             <Link to="/home" data-aos="fade-up" data-aos-delay="100">Home</Link>
