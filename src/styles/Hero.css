@@ -1,153 +1,43 @@
-/* .hero-container {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  overflow-y: hidden;
-}
-.left-section img {
-  width: 100%;
-  min-height: 100vh;
-  object-fit: cover;
-}
-
-.right-section {
-  width: 66.67%;
-  display: flex;
-  flex-direction: column;
-  z-index: 10;
-  position: relative;
-  overflow-y: hidden;
-}
-
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.content-section {
-  display: flex;
-  flex-grow: 1;
-  position: relative;
-  bottom: 70px;
-}
-
-.vertical-links {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 50%;
-  padding: 20px;
-  margin-left: 50px;
-  position: relative;
-  top: 50px;
-}
-
-.vertical-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 50px;
-  margin-bottom: 5px;
-  transition: color 0.3s ease;
-  text-align: left;
-  width: 210px;
-  padding: 0.2px;
-}
-
-.vertical-links a:hover {
-  background: linear-gradient(to right, #f987d6, #6a47af 50%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; 
-}
-
-.other-content {
-  text-align: right;
-  position: relative;
-  top: 180px;
-  color: white;
-}
-
-.other-content p {
-  margin: 0;
-  padding: 10px 35px;
-}
-
-.other-content a {
-  text-decoration: none;
-  position: relative;
-  color: white;
-}
-
-.other-content a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: #d1a6da;
-  transition: width 0.5s ease-in-out;
-}
-
-.other-content a:hover {
-  color: rgb(255, 255, 255);
-  background: none;
-}
-
-.other-content a:hover::after {
-  width: 100%;
-}
-
-.tag-1 {
-  text-align: center;
-  color: rgb(223, 213, 213);
-  padding-left: 70px;
-  margin-bottom: 8px;
-  font-size: x-small;
-  text-align: left;
-} */
-
+/* Global settings for body and html */
 body, html {
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevent scrolling on the entire page */
+  overflow: hidden;
   height: 100%;
   width: 100%;
 }
 
+/* Main container for the hero section */
 .hero-container {
   display: flex;
   height: 100vh;
   width: 100%;
 }
 
+/* Left section image */
 .left-section img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
 }
 
+/* Right section */
 .right-section {
-  width: 66.67%;
+  width: 66.67vw; /* Relative to viewport width */
   display: flex;
   flex-direction: column;
-  z-index: 10;
   position: relative;
-  overflow: hidden; /* No overflow in this section */
+  z-index: 10;
+  overflow: hidden;
 }
 
+/* Background video settings */
 .background-video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   z-index: -1;
   pointer-events: none;
@@ -157,30 +47,31 @@ body, html {
   display: flex;
   flex-grow: 1;
   position: relative;
-  bottom: 70px;
-  overflow: hidden; /* Ensure no overflow here */
+  bottom: 5vh; /* Relative to viewport height */
+  overflow: hidden;
+  align-items: flex-start; /* Ensure vertical alignment */
 }
 
+/* Vertical links section */
 .vertical-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
-  padding: 20px;
-  margin-left: 50px;
+  width: 50%; /* Relative width */
+  padding: 2vw;
+  margin-left: 3vw;
   position: relative;
-  top: 50px;
+  top: 150px; /* Remove extra top to align both sections */
+  flex: 1; /* Allows it to grow equally */
 }
 
 .vertical-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 50px;
-  margin-bottom: 5px;
+  font-size: 3vw; /* Scale font size with viewport */
+  margin-bottom: 1vh;
   transition: color 0.3s ease;
   text-align: left;
-  width: 210px;
-  padding: 0.2px;
 }
 
 .vertical-links a:hover {
@@ -190,21 +81,24 @@ body, html {
   background-clip: text; /* For other browsers */
 }
 
+/* Other content settings */
 .other-content {
   text-align: right;
   position: relative;
-  top: 180px;
   color: white;
+  flex: 1; /* Allows it to grow equally */
+  padding-right: 3vw;
+  top: 0; /* Align with vertical links */
 }
+
 
 .other-content p {
   margin: 0;
-  padding: 10px 35px;
+  padding: 1vh 2vw; /* Adjusted padding to viewport units */
 }
 
 .other-content a {
   text-decoration: none;
-  position: relative;
   color: white;
 }
 
@@ -219,21 +113,87 @@ body, html {
   transition: width 0.5s ease-in-out;
 }
 
-.other-content a:hover {
-  color: rgb(255, 255, 255);
-  background: none;
-}
-
 .other-content a:hover::after {
   width: 100%;
 }
 
+/* Tag section */
 .tag-1 {
-  text-align: center;
   color: rgb(223, 213, 213);
-  padding-left: 70px;
-  margin-bottom: 8px;
-  font-size: x-small;
+  padding-left: 5vw;
+  margin-bottom: 1vh;
+  font-size: 0.8vw;
   text-align: left;
 }
 
+/* Responsive Design - Media Queries */
+
+/* Larger screens, increase the space of the right section */
+@media (min-width: 1600px) {
+  .content-section{
+    position: relative;
+    top: 8vh; 
+  }
+  .vertical-links a {
+    font-size: 2.9vw; /* Slightly smaller for larger screens */
+  }
+
+  .right-section {
+    width: 60vw; /* Adjust width on large screens */
+  }
+
+  .other-content {
+    top: 12vh;
+  }
+  .other-content p{
+    font-size: 1.2vw;
+  }
+}
+
+/* For smaller screens - below 1326px */
+@media (max-width: 1326px) {
+  .right-section {
+    width: 100%; /* Use full width */
+  }
+
+  .left-section img {
+    display: none; /* Hide the image on smaller screens for more content space */
+  }
+
+  .vertical-links a {
+    font-size: 4.5vw; /* Make the links larger for smaller screens */
+  }
+
+  .content-section {
+    bottom: 5vh; /* Adjust space */
+  }
+
+  .other-content {
+    top: 8vh; /* Adjust spacing */
+  }
+}
+
+/* For mobile devices - below 768px */
+@media (max-width: 768px) {
+  .right-section {
+    width: 100%; /* Take full width */
+  }
+
+  .vertical-links {
+    width: 80%;
+    margin-left: 10px;
+  }
+
+  .vertical-links a {
+    font-size: 5vw; /* Increase font size for mobile */
+  }
+
+  .other-content {
+    top: 5vh;
+  }
+
+  .tag-1 {
+    padding-left: 2vw;
+    font-size: 2.5vw; /* Adjust font size for mobile */
+  }
+}

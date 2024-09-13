@@ -10,7 +10,7 @@ const Button: React.FC = () => {
   };
 
   return (
-    <button className="begin-search-button" onClick={handleClick}>
+    <button className="download-button" onClick={handleClick}>
       Download CV
     </button>
   );
