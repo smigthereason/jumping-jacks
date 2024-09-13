@@ -10,35 +10,54 @@ const About: React.FC = () => {
     AOS.init();
   }, []);
 
+  const handleHomeRedirect = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    document
+      .querySelector(".contact-container")
+      ?.setAttribute("data-aos", "zoom-out");
+    setTimeout(() => {
+      window.location.href = "/"; // Redirect to the homepage after animation
+    }, 1000);
+  };
+
   return (
-    <div className="home-container">
+    <div
+      className="home-container"
+      data-aos="zoom-out"
+      data-aos-duration="3000"
+      data-aos-delay="0"
+    >
       {" "}
       {/* Added a container class for styling */}
       <div className="right-section">
-        {" "}
         {/* Reversed: Left to Right */}
-        <Header />
+        <Header onHomeRedirect={handleHomeRedirect} />
+
         <div
           className="about-container"
           data-aos="fade-up"
           data-aos-duration="3000"
           data-aos-delay="0"
         >
-          <LineHead title="about me"/>
+          <LineHead title="about me" />
           <div className="main-content">
             <div className="content1">
               <p className="center-text">
-                I'm a dedicated developer and current student at Moringa School,
-                deeply passionate about web development and machine learning.{" "}
-                <br /> I thrive on creating cutting-edge solutions and
-                constantly expanding my knowledge of new technologies.
+                I'm a dedicated developer, deeply passionate about web
+                development and machine learning. <br /> I thrive on creating
+                cutting-edge solutions and constantly expanding my knowledge of
+                new technologies.
               </p>
+            </div>
+            <div className="tools">
+              <h3>🛠️ Skills and Tools</h3>
             </div>
 
             <div className="skills-container">
               <div className="skills-box">
                 <div className="skills-section">
-                  <h2>🛠️ Skills and Tools</h2>
                   <h3>Technologies</h3>
                   <p>
                     <img
