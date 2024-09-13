@@ -31,14 +31,14 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: purple;
+  background: rgb(55, 0, 128);
   border-radius: 2px; /* Rounded corners for the thumb */
 }
 
 /* For Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: purple transparent;
+  scrollbar-color: rgb(55, 0, 128) transparent;
 }
 
 /* Hide scrollbar buttons for vertical scrollbars */

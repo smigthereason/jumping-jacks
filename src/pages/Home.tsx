@@ -12,7 +12,10 @@ const Home: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   }, []);
 
   const categories = ["Full Stack Web-Developer.", "UI/UX Designer."];
@@ -21,39 +24,18 @@ const Home: React.FC = () => {
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
     e.preventDefault();
-
-    // Add AOS animation before navigating back to Hero
-    document.querySelector(".home-container")?.setAttribute("data-aos", "zoom-out");
-
-    // Wait for the AOS animation to complete before navigating
+    document.querySelector(".home-container")?.classList.add("aos-animate");
     setTimeout(() => {
-      navigate("/"); // Navigate to the Hero route after animation
-    }, 1000); // Ensure this matches the AOS duration
+      navigate("/");
+    }, 1000);
   };
 
   return (
-    <div
-      className="home-container"
-      data-aos="zoom-out"
-      data-aos-duration="3000"
-      data-aos-delay="0"
-    >
-      <div className="right-section">
+    <div className="home-container" data-aos="zoom-out">
+      <div className="right-section1">
         <Header onHomeRedirect={handleHomeRedirect} />
-        <div
-          className="scrollable-container"
-          style={{
-            height: "auto",
-            overflowY: "hidden",
-            padding: "10px",
-          }}
-        >
-          <div
-            className="home_block"
-            data-aos="fade-up"
-            data-aos-duration="3000"
-            data-aos-delay="0"
-          >
+        <div className="scrollable-container">
+          <div className="home_block" data-aos="fade-up" data-aos-delay="300">
             <LineHead title="Home" />
             <div className="title_block">
               <h1 className="title">
