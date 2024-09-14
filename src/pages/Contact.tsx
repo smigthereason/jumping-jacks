@@ -6,14 +6,14 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import ContactForm from "../components/ContactForm";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { FaFacebook } from "react-icons/fa";
+// import { FaSquareXTwitter } from "react-icons/fa6";
+// import { FaFacebook } from "react-icons/fa";
 
 // Define link constants
 const LINKEDIN_URL = "https://www.linkedin.com/in/victor-maina-389318301/";
-const GITHUB_URL = "mailto:victor.dmaina@gmail.com";
-const FACEBOOK_URL = "https://www.facebook.com/victor.maina.1/";
-const TWITTER_URL = "https://twitter.com/victor_maina";
+const GITHUB_URL = "https://github.com/smigthereason";
+// const FACEBOOK_URL = "https://www.facebook.com/victor.maina.1/";
+// const TWITTER_URL = "https://twitter.com/victor_maina";
 
 interface CardProps {
   icon: React.ReactNode;
@@ -75,10 +75,10 @@ const Contact: React.FC = () => {
                   icon={<LocationIcon />}
                   title="Location"
                   content={[
-                    "11 West 53 Street",
-                    "New York, NY 10019",
-                    "3400 Broadway,",
-                    "Oakland, CA 94611",
+                    "Nairobi, Kenya",
+                    // "New York, NY 10019",
+                    // "3400 Broadway,",
+                    // "Oakland, CA 94611",
                   ]}
                 />
                 <Card
@@ -109,54 +109,54 @@ const Contact: React.FC = () => {
                         <span>LinkedIn</span>
                       </a>
                     </div>,
-                    <div
-                      key="twitter"
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        height: "100%",
-                      }}
-                    >
-                      <a
-                        href={TWITTER_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          textDecoration: "none",
-                          color: "inherit",
-                        }}
-                      >
-                        <FaSquareXTwitter />
-                        <span>Twitter</span>
-                      </a>
-                    </div>,
-                    <div
-                      key="facebook"
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        height: "100%",
-                      }}
-                    >
-                      <a
-                        href={FACEBOOK_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          textDecoration: "none",
-                          color: "inherit",
-                        }}
-                      >
-                        <FaFacebook />
-                        <span>Facebook</span>
-                      </a>
-                    </div>,
+                    // <div
+                    //   key="twitter"
+                    //   style={{
+                    //     display: "flex",
+                    //     justifyContent: "center",
+                    //     alignItems: "center",
+                    //     height: "100%",
+                    //   }}
+                    // >
+                    //   <a
+                    //     href={TWITTER_URL}
+                    //     target="_blank"
+                    //     rel="noopener noreferrer"
+                    //     style={{
+                    //       display: "flex",
+                    //       alignItems: "center",
+                    //       textDecoration: "none",
+                    //       color: "inherit",
+                    //     }}
+                    //   >
+                    //     <FaSquareXTwitter />
+                    //     <span>Twitter</span>
+                    //   </a>
+                    // </div>,
+                    // <div
+                    //   key="facebook"
+                    //   style={{
+                    //     display: "flex",
+                    //     justifyContent: "center",
+                    //     alignItems: "center",
+                    //     height: "100%",
+                    //   }}
+                    // >
+                    //   <a
+                    //     href={FACEBOOK_URL}
+                    //     target="_blank"
+                    //     rel="noopener noreferrer"
+                    //     style={{
+                    //       display: "flex",
+                    //       alignItems: "center",
+                    //       textDecoration: "none",
+                    //       color: "inherit",
+                    //     }}
+                    //   >
+                    //     <FaFacebook />
+                    //     <span>Facebook</span>
+                    //   </a>
+                    // </div>,
                     <div
                       key="github"
                       style={{
@@ -188,9 +188,7 @@ const Contact: React.FC = () => {
                   title="Contact"
                   content={[
                     "+254 707 09 8723",
-                    "+254 704 542321",
                     "victor.dmaina@gmail.com",
-                    "prodbysmig@gmail.com",
                   ]}
                 />
               </div>

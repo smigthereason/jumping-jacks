@@ -98,7 +98,7 @@ const Portfolio: React.FC = () => {
         >
           <LineHead title="portfolio" />
           <div className="portfolio">
-            <h1>Let's get in touch and embark on new endeavors!</h1>
+            <h1>From Concept to Reality: My Project Portfolio</h1>
 
             <div className="timeline">
               {experiences.map((exp) => (

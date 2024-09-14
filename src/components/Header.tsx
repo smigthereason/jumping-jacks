@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ onHomeRedirect }) => {
             <MdEmail  />
           </a>
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/smigthereason"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icons"
