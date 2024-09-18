@@ -1,3 +1,6 @@
+/* In your Portfolio.css or a global styles file */
+/* @import "~@splidejs/splide/dist/css/splide.min.css"; */
+
 .portfolio-container {
   display: flex;
   height: 100vh;
@@ -5,18 +8,8 @@
   overflow-x: hidden;
 }
 
-.right-section {
-  width: 66.67%;
-  background-color: #130219;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
-}
-
 .left-section {
   width: 33.33%;
-  background: url("/src/assets/Celebrities Looks.jpeg") no-repeat center center;
-  background-size: cover;
 }
 
 .portfolio {
@@ -30,17 +23,15 @@
   position: relative;
   top: 5vh;
   flex-direction: column;
-  gap: 4rem; /* Add gap between the experience cards */
+  gap: 4rem; 
 }
 
 .experience-card {
   position: relative;
   text-align: center;
-  margin: 2vh 3vw; /* Center the cards */
-  width: 55vw; /* Optional: Set a max-width for each card */
-  /* padding: 1rem; */
+  margin: 2vh 3vw; 
+  width: 55vw; 
   padding-bottom: 4rem;
-
 }
 
 .card-content {
@@ -73,12 +64,31 @@
   justify-content: center;
   color: #64ffda;
   font-weight: bold;
+  object-fit: contain;
 }
+.logo-text {
+  position: relative;
+  top: 2vh;
+  font-size: 1.2rem;
+  height: 80px;
+  width: 80px;
+  font-weight: bold;
+  display: inline-block;
+  color: #64ffda;
+  font-weight: bold;
+  object-fit: contain;
 
+}
 h3 {
   color: #ccd6f6;
   margin: 0 0 0.5rem;
   font-size: 1.25rem;
+}
+h5 {
+  color: #ccd6f6;
+  margin: 0 0 0.5rem;
+  font-size: 3vh;
+  font-style: italic;
 }
 
 h4 {
@@ -107,25 +117,88 @@ p {
 .skills strong {
   color: #ccd6f6;
 }
+.splide {
+  position: relative;
+  bottom: 2vh;
+  height: 100vh;
+}
 
-  /* Responsive Design - Media Queries */
+.slides .slide1{
+  position: relative;
+  top: 30vh;
+  width: 25vw;
+  height: auto;
+  max-height: 70vh;
+}
+
+/* Styles for the second slide */
+.slides .slide2 {
+  position: relative;
+  top: 40vh;
+  left: 4vw;
+  width: 25vw;
+  height: auto;
+  max-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Styles for the third slide */
+.slides .slide3 {
+  position: relative;
+  top: 45vh;
+  left: 4vw;
+  width: 25vw;
+  height: auto;
+  max-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Styles for the fourth slide */
+.slides .slide4 {
+  position: relative;
+  width: 20vw;
+  height: 100vh;
+  object-fit: contain;
+  
+}
+.slides h2 {
+  font-family: "Italianno", cursive;
+  position: relative;
+  top: 35vh;
+  left: 4vw;
+  font-size: 10vh;
+  font-style: italic;
+  font-weight: bold;
+  color: #ffffff;
+  border: solid 5px #ffffff;
+  width: 25vw;
+}
+.slides h3 {
+  position: relative;
+  top: 45vh;
+  font-size: 5vh;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Responsive Design - Media Queries */
 
 /* Larger screens, increase the space of the right section */
 @media (min-width: 1600px) {
-  h3{
+  h3 {
     font-size: 1.8rem;
   }
-  h4{
+  h4 {
     font-size: 3vh;
   }
-  p{
+  p {
     font-size: 1.2rem;
   }
-  h1{
+  h1 {
     position: relative;
     top: 2vh;
     font-size: 2.5rem;
   }
 }
-
-
