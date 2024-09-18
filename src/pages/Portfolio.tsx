@@ -173,7 +173,7 @@ const Portfolio: React.FC = () => {
                 type: "loop",
                 perPage: 1,
                 autoplay: true,
-                interval: 90000,
+                interval: 5000,
                 speed: 2500,
               }}
             >
