@@ -7,6 +7,7 @@ import Header from "../components/Header";
 import LineHead from "../components/LineHead";
 import "/src/styles/Home.css";
 import { useNavigate } from "react-router-dom";
+import Me2 from "../assets/50.png"
 
 const Home: React.FC = () => {
   const navigate = useNavigate();
@@ -64,7 +65,7 @@ const Home: React.FC = () => {
       </div>
       <div className="left-section1">
         <div className="close">
-          <img src="/src/assets/50.png" alt="Me2" />
+          <img src={Me2} alt="Me2" />
         </div>
       </div>
     </div>
