@@ -4,6 +4,24 @@ import Header from "../components/Header";
 import LineHead from "../components/LineHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/dist/css/splide.min.css";
+import { FaReact } from "react-icons/fa";
+// import Re from "../assets/svg/react.svg"
+import Python from "../assets/svg/python.svg";
+import Java from "../assets/svg/javascript-js.svg";
+import Type from "../assets/svg/typescript-icon.svg";
+import Node from "../assets/svg/node-js.svg";
+import Tail from "../assets/svg/tailwind-css.svg";
+import CSS from "../assets/svg/file-type-css.svg";
+import GitIcon from "../assets/svg/git.svg";
+import HTML from "../assets/svg/file-type-html.svg";
+import Flask from "../assets/svg/flask.svg";
+import SQL from "../assets/svg/database-sql.svg";
+import Lite from "../assets/svg/sqlite.svg";
+import VS from "../assets/svg/vs-code.svg";
+import Post from "../assets/svg/postman.svg";
+import Vite from "../assets/svg/brand-vite.svg";
 
 const About: React.FC = () => {
   React.useEffect(() => {
@@ -155,7 +173,83 @@ const About: React.FC = () => {
       </div>
       <div className="left-section">
         {/* Placeholder for content that was originally in the left section */}
-        <div className="tag"></div>
+        <div
+          className="dev-icons"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+          data-aos-delay="0"
+        >
+          <Splide
+            options={{
+              type: "loop",
+              perPage: 1,
+              autoplay: true,
+              interval: 3000,
+              speed: 2500,
+            }}
+          >
+            <SplideSlide>
+            {/* <img src={Re} alt="Svg 1" className="svg" /> */}
+              <FaReact className="react-icon" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={Python} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={Java} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={Type} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={Node} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={Tail} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={CSS} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={GitIcon} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={HTML} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={Flask} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={SQL} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={Lite} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={VS} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={Post} alt="Svg 1" className="svg" />
+            </SplideSlide>
+            <SplideSlide>
+              {/* svg */}
+              <img src={Vite} alt="Svg 1" className="svg" />
+            </SplideSlide>
+          </Splide>
+        </div>
       </div>
     </div>
   );

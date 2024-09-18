@@ -111,6 +111,48 @@
 .content6{
   padding-bottom: 5vw;
 }
+.splide  {
+  position: relative;
+  bottom: 2vh;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center;
+}
+.dev-icons{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.dev-icons img{
+  position: relative;
+  width: 25vw;
+  height: 100vh;
+  object-fit: contain;
+}
+
+
+.react-icon {
+  font-size: 50vh; /* Adjust the size as needed */
+  color: #61DBFB; /* React's official color */
+  position: relative;
+  width: 25vw;
+  height: 100vh;
+  transform: translate(-50%, -50%); /* Center the icon */
+  animation: spin 5s linear infinite; /* Optional: spin animation */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
   /* Responsive Design - Media Queries */
 
 /* Larger screens, increase the space of the right section */
