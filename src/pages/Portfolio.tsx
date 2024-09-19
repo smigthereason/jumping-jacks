@@ -44,7 +44,7 @@ const Portfolio: React.FC = () => {
     setSlideOut(true);
 
     setTimeout(() => {
-      navigate("/");
+      navigate("/start");
     }, 1000); // Adjust the duration to match your AOS animation duration
   };
 

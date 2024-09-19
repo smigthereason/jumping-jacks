@@ -7,7 +7,6 @@ import "aos/dist/aos.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
 import { FaReact } from "react-icons/fa";
-// import Re from "../assets/svg/react.svg"
 import Python from "../assets/svg/python.svg";
 import Java from "../assets/svg/javascript-js.svg";
 import Type from "../assets/svg/typescript-icon.svg";
@@ -36,7 +35,7 @@ const About: React.FC = () => {
       .querySelector(".contact-container")
       ?.setAttribute("data-aos", "zoom-out");
     setTimeout(() => {
-      window.location.href = "/"; // Redirect to the homepage after animation
+      window.location.href = "/start"; // Redirect to the homepage after animation
     }, 1000);
   };
 
@@ -189,7 +188,6 @@ const About: React.FC = () => {
             }}
           >
             <SplideSlide>
-            {/* <img src={Re} alt="Svg 1" className="svg" /> */}
               <FaReact className="react-icon" />
             </SplideSlide>
             <SplideSlide>

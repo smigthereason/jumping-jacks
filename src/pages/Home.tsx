@@ -27,7 +27,7 @@ const Home: React.FC = () => {
     e.preventDefault();
     document.querySelector(".home-container")?.classList.add("aos-animate");
     setTimeout(() => {
-      navigate("/");
+      navigate("/start");
     }, 1000);
   };
 
