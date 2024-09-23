@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "/src/styles/Contact.css";
 import Header from "../components/Header";
 import LineHead from "../components/LineHead";
@@ -8,8 +8,24 @@ import ContactForm from "../components/ContactForm";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 // Define link constants
-const LINKEDIN_URL = "https://www.linkedin.com/in/victor-maina-389318301/";
+const LINKEDIN_URL = "https://www.linkedin.com/in/victor-dmaina/";
 const GITHUB_URL = "https://github.com/smigthereason";
+
+// Testimonials array
+const testimonials = [
+  {
+    name: "Sylvia Chebet",
+    text: "Working with Victor at Moringa was an incredibly rewarding experience. He is a selfless, hardworking individual who consistently goes above and beyond in every project. One of Victor’s greatest strengths is his ability to not only deliver projects on time but also to ensure that each project is unique, innovative, and impactful.",
+  },
+  {
+    name: "Sharon Kahira",
+    text: "Victor served as our scrum master and was remarkable in his role. His coding skills are impressive, but it was his ability to coordinate and support the team that truly stood out. He always made it a point to check in with each of us, asking if we were facing any challenges or needed help debugging our work.",
+  },
+  {
+    name: "Stephy Kamau",
+    text: "Collaborating with Victor at Moringa was truly fulfilling. He’s a dedicated and driven professional who consistently exceeds expectations. Victor’s standout quality is his ability to lead in projects and deliver creative and meaningful work.",
+  },
+];
 
 interface CardProps {
   icon: React.ReactNode;
@@ -28,21 +44,28 @@ const Card: React.FC<CardProps> = ({ icon, title, content }) => (
 );
 
 const Contact: React.FC = () => {
-  React.useEffect(() => {
-    AOS.init();
-  }, []);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [fadeIn, setFadeIn] = useState(true);
+  const [fadeCount, setFadeCount] = useState(0); // Tracks the fade-in/out count
 
-  const handleHomeRedirect = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
-  ) => {
-    e.preventDefault();
-    document
-      .querySelector(".contact-container")
-      ?.setAttribute("data-aos", "zoom-out");
-    setTimeout(() => {
-      window.location.href = "/start"; // Redirect to the homepage after animation
-    }, 1000);
-  };
+  useEffect(() => {
+    AOS.init();
+
+    const intervalId = setInterval(() => {
+      setFadeIn((prev) => !prev); // Toggle fade-in/out
+
+      // Increment fade count each time it fades in/out
+      setFadeCount((prevCount) => prevCount + 1);
+
+      // After two fade cycles (in and out), switch to the next testimonial
+      if (fadeCount >= 3) {
+        setFadeCount(0); // Reset fade count
+        setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+      }
+    }, 3000); // 3 seconds for each fade in/out cycle
+
+    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+  }, [fadeCount]);
 
   return (
     <div
@@ -51,7 +74,7 @@ const Contact: React.FC = () => {
       data-aos-duration="3000"
     >
       <div className="right-section">
-        <Header onHomeRedirect={handleHomeRedirect} />
+        <Header />
         <div className="scrollable-container">
           <div
             className="contact_block"
@@ -59,21 +82,18 @@ const Contact: React.FC = () => {
             data-aos-duration="3000"
             data-aos-delay="0"
           >
-              <LineHead title="Contact" />
+            <LineHead title="Contact" />
             <div className="section_block">
               <div className="sub_title">
                 <h3 className="section_title">
-                  Let's get in touch and embark on new endeavors!
+                Let's Connect: Reach Out and Get in Touch
                 </h3>
               </div>
               <div className="cards-container">
                 <Card
                   icon={<LocationIcon />}
                   title="Location"
-                  content={[
-                    "Nairobi, Kenya",
-                    
-                  ]}
+                  content={["Nairobi, Kenya"]}
                 />
                 <Card
                   icon={<HeartIcon />}
@@ -132,10 +152,7 @@ const Contact: React.FC = () => {
                 <Card
                   icon={<RocketIcon />}
                   title="Contact"
-                  content={[
-                    "+254 707 09 8723",
-                    "victor.dmaina@gmail.com",
-                  ]}
+                  content={["+254 707 09 8723", "victor.dmaina@gmail.com"]}
                 />
               </div>
               <div className="form_block">
@@ -145,8 +162,12 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
+
       <div className="left-section">
-        <div className="extra"></div>
+        <div className={`extra ${fadeIn ? "fade-in" : "fade-out"}`}>
+          <p>{testimonials[currentTestimonial].text}</p>
+          <h4>- {testimonials[currentTestimonial].name}</h4>
+        </div>
       </div>
     </div>
   );

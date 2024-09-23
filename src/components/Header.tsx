@@ -2,13 +2,19 @@ import React from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { TiArrowForwardOutline } from "react-icons/ti";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "/src/styles/Header.css";
 
-interface HeaderProps {
-  onHomeRedirect: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => void;
-}
+const Header: React.FC = () => {
+  const navigate = useNavigate(); // Initialize navigation
 
-const Header: React.FC<HeaderProps> = ({ onHomeRedirect }) => {
+  const handleHomeRedirect = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    e.preventDefault(); // Prevent the default anchor behavior
+    navigate("/start"); // Redirect to the `/start` route
+  };
+
   return (
     <nav className="head">
       <div className="name">
@@ -17,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ onHomeRedirect }) => {
       <div className="top-nav">
         <div className="social-icons1">
           <a
-            href="https://www.linkedin.com/in/victor-maina-389318301/"
+            href="https://www.linkedin.com/in/victor-dmaina/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icons"
@@ -30,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ onHomeRedirect }) => {
             rel="noopener noreferrer"
             className="social-icons"
           >
-            <MdEmail  />
+            <MdEmail />
           </a>
           <a
             href="https://github.com/smigthereason"
@@ -41,12 +47,12 @@ const Header: React.FC<HeaderProps> = ({ onHomeRedirect }) => {
             <FaGithub />
           </a>
           <a
-            href="/"
-            onClick={onHomeRedirect}
+            href="/start"
+            onClick={handleHomeRedirect} // Use the home redirect function
             rel="noopener noreferrer"
             className="social-icons"
           >
-            <TiArrowForwardOutline  />
+            <TiArrowForwardOutline />
           </a>
         </div>
       </div>
