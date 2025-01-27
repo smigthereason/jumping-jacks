@@ -248,7 +248,13 @@
       }
       
       .slides .slide1 {
-       display: none;
+        position: relative;
+        top: 40vh;
+        left: 4vw;
+        width: 100vw;
+        height: auto;
+        max-height: 40vh;
+       
       }
       
       .slides .slide2 {
@@ -281,7 +287,11 @@
       }
       
       .slides .slide4 {
-        display: none;
+        position: relative;
+        top: 25vh;
+        left: 2vw;
+        width: 95vw;
+        height: 100vh;
       }  
   }
   
