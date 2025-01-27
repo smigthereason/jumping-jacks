@@ -9,7 +9,7 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import Button1 from "../components/Button1";
 import Button2 from "../components/Button2";
 import jj from "../assets/jj.png";
-import vid from "../assets/jumpingjacklanding.webp";
+import vid from "../assets/jumpingjacklanding.mp4";
 import one from "../assets/1.jpeg";
 import two from "../assets/2.jpeg";
 
