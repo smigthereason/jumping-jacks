@@ -248,11 +248,7 @@
       }
       
       .slides .slide1 {
-        position: relative;
-        top: 0vh;
-        width: 100vw;
-        height: 50vh;
-        transform-origin: center;
+       display: none;
       }
       
       .slides .slide2 {
@@ -285,12 +281,7 @@
       }
       
       .slides .slide4 {
-        position: relative;
-        top: 5vh;
-        width: 100vw;
-        height: 80vh;
-        object-fit: cover;
-        border-radius: 10%;
+        display: none;
       }  
   }
   
