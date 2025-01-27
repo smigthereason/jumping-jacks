@@ -5,7 +5,12 @@
   width: 100vw;
   overflow-y: hidden;
   z-index: 100;
+  background-image: url(/src/assets/jj.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .right-section1 {
   width: 66.67%;
   height: 100vh;
@@ -16,6 +21,9 @@
   overflow-x: hidden;
   padding: 10px;
 }
+.left-section {
+    width: 33.33%;
+  }
 .head_line {
   position: absolute;
   top: 4vh; 
@@ -51,8 +59,8 @@
 
 .info-box-container {
   display: grid;
-  grid-auto-flow: row; /* Changed from 'column' to 'row' */
-  grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+  grid-auto-flow: row; 
+  grid-template-columns: repeat(2, 1fr); 
   grid-auto-rows: minmax(100px, auto);
   justify-content: space-around;
   width: 60vw;
@@ -63,10 +71,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 10px; /* Add horizontal space between info boxes */
-  background-color: rgba(159, 67, 196, 0.281); /* Slightly transparent background for the info boxes */
+  margin: 0 10px; 
+  background-color: rgba(159, 67, 196, 0.281); 
   padding: 10px;
-  border-radius: 10px; /* Optional: add rounded corners */
+  border-radius: 10px; 
 }
 .info-number {
   font-size: 2rem;
@@ -79,8 +87,8 @@
 
 .home_block {
   display: grid;
-  grid-auto-flow: row; /* Changed from 'column' to 'row' */
-  grid-template-columns: repeat(1, 1fr); /* Creates 2 columns */
+  grid-auto-flow: row; 
+  grid-template-columns: repeat(1, 1fr); 
   grid-auto-rows: minmax(100px, auto);
   position: relative;
   top: 8vh;
@@ -88,9 +96,9 @@
 }
 
 
-  /* Responsive Design - Media Queries */
 
-/* Larger screens, increase the space of the right section */
+
+
 @media (min-width: 1600px) {
   .title_block{
     top: 12vh;
@@ -113,3 +121,145 @@
   }
 
 }
+
+
+
+
+h3 {
+  color: #ccd6f6;
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+h5 {
+  color: #ccd6f6;
+  margin: 0 0 0.5rem;
+  font-size: 3vh;
+  font-style: italic;
+}
+
+h4 {
+  color: #64ffda;
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+
+
+
+.skills {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.skills strong {
+  color: #ccd6f6;
+}
+.splide {
+  position: relative;
+  bottom: 2vh;
+  height: 100vh;
+}
+
+.slides .slide1{
+  position: relative;
+  top: 30vh;
+  width: 25vw;
+  height: auto;
+  max-height: 70vh;
+}
+
+
+.slides .slide2 {
+  position: relative;
+  top: 40vh;
+  left: 4vw;
+  width: 25vw;
+  height: auto;
+  max-height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides .slide3 {
+  position: relative;
+  top: 45vh;
+  left: 4vw;
+  width: 25vw;
+  height: auto;
+  max-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides .slide4 {
+  position: relative;
+  width: 20vw;
+  height: 100vh;
+  object-fit: contain;
+  
+}
+.slides h2 {
+  font-family: "Italianno", cursive;
+  position: relative;
+  top: 35vh;
+  left: 4vw;
+  font-size: 10vh;
+  font-style: italic;
+  font-weight: bold;
+  color: #ffffff;
+  border: solid 5px #ffffff;
+  width: 25vw;
+}
+.slides h3 {
+  position: relative;
+  top: 45vh;
+  font-size: 5vh;
+  font-style: italic;
+  font-weight: bold;
+}
+
+
+@media (min-width: 1600px) {
+  h3 {
+    font-size: 1.8rem;
+  }
+  h4 {
+    font-size: 3vh;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+  h1 {
+    position: relative;
+    top: 2vh;
+    font-size: 2.5rem;
+  }
+}
+
+
+
+
+  
+
+  
+ 
+  
+ 
+  
+
+  
+
+
+  
+
+ 
+  
+
+
+
+ 
+ 
+
+ 

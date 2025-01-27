@@ -1,19 +1,16 @@
 import React, { useEffect } from "react";
 import "aos/dist/aos.css";
 import "/src/styles/Home.css";
-import "/src/styles/Portfolio.css";
 import Header from "../components/Header";
-import LineHead from "../components/LineHead";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
-import Omega from "../assets/logos/omega.png";
-import Logo from "../assets/logos/kindr-logo.png";
-import Tune from "../assets/logos/tune.png";
-import WinkLogo from "../assets/logos/wink-transparent.png";
-import TypedJS from "../components/TypedJS";
 import Button from "../components/Button";
+import jj from "../assets/jj.png";
+import vid from "../assets/jumpingjacklanding.mp4";
+import one from "../assets/1.jpeg";
+import two from "../assets/2.jpeg";
 
 const Home: React.FC = () => {
   useEffect(() => {
@@ -25,7 +22,6 @@ const Home: React.FC = () => {
 
  
   
-    const categories = ["Full Stack Web-Developer.", "UI/UX Designer."];
     
   
    
@@ -37,13 +33,10 @@ const Home: React.FC = () => {
           <Header />
           <div className="scrollable-container">
             <div className="home_block" data-aos="fade-up" data-aos-delay="300">
-              <LineHead title="Home" />
               <div className="title_block">
-                <h1 className="title">
-                  My name is Victor.
-                  <br />
-                  I am a <br /> <TypedJS strings={categories} />
-                </h1>
+                <h2 className="title">
+                Bounce, fall, repeat! Guide Jack, our clumsy pogo stick rider, through tricky obstacles on his way up. Jack's only goal to climb higher but no one knows what awaits at the top -a way out or an even greater mystery. But remember, one mistake could send you tumbling all the way down!
+                </h2>
               </div>
               <div className="house">
                 <div className="info-box-container">
@@ -73,23 +66,19 @@ const Home: React.FC = () => {
                 }}
               >
                 <SplideSlide>
-                  <img src={Omega} alt="Slide 1" className="slide1" />
+                  <img src={jj} alt="Slide 1" className="slide1" />
                 </SplideSlide>
                 <SplideSlide>
-                  <img src={Logo} alt="Slide 2" className="slide2" />
+                    <video src={vid}></video>
                 </SplideSlide>
                 <SplideSlide>
-                  <img src={Tune} alt="Slide 3" className="slide3" />
+                  <img src={one} alt="Slide 3" className="slide3" />
                 </SplideSlide>
+               
                 <SplideSlide>
-                  <h3>Passionate-Angels</h3>
+                  <img src={two} alt="Slide 5" className="slide4" />
                 </SplideSlide>
-                <SplideSlide>
-                  <img src={WinkLogo} alt="Slide 5" className="slide4" />
-                </SplideSlide>
-                <SplideSlide>
-                  <h2>Korda-Lavare</h2>
-                </SplideSlide>
+               
               </Splide>
             </div>
           </div>

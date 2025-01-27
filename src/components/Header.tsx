@@ -16,7 +16,7 @@ const Header: React.FC = () => {
   return (
     <nav className="head">
       <div className="name">
-        <h2>E-games</h2>
+        <h2>Jumping Jack</h2>
       </div>
       <div className="top-nav">
         <div className="social-icons1">
