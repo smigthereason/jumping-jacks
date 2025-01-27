@@ -9,7 +9,7 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import Button1 from "../components/Button1";
 import Button2 from "../components/Button2";
 import jj from "../assets/jj.png";
-import vid from "/public/jumpingjacklanding.mp4";
+import vid from "../assets/jumpingjacklanding.mp4";
 import one from "../assets/1.jpeg";
 import two from "../assets/2.jpeg";
 
@@ -24,6 +24,25 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="home-container" data-aos="zoom-out">
+        <video
+          autoPlay
+          muted
+          loop
+          className="background-video"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover", // Ensure the video covers the entire screen
+            zIndex: -1, // Ensure the video stays behind other content
+          }}
+        >
+          <source src="https://cdn.pixabay.com/video/2021/09/27/89894-616430996_large.mp4" 
+          type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="right-section1">
           <Header />
           <div className="scrollable-container">
@@ -40,7 +59,7 @@ const Home: React.FC = () => {
               <div className="house">
                 <div className="info-box-container">
                   <Button1 />
-                  <Button2  />
+                  <Button2 />
                 </div>
               </div>
             </div>
@@ -67,7 +86,8 @@ const Home: React.FC = () => {
               </SplideSlide>
               <SplideSlide>
                 <video
-                  src={vid}
+          src={vid}
+                  
                   autoPlay
                   loop
                   muted

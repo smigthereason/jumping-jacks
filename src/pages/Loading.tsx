@@ -76,7 +76,7 @@ const Loading: React.FC = () => {
         }}
       >
         <source
-          src="/public/jumpingjacklanding.mp4"
+          src="https://cdn.pixabay.com/video/2021/09/27/89894-616430996_large.mp4"
           type="video/mp4"
         />
       </video>
