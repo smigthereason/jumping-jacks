@@ -47,7 +47,7 @@ const App: React.FC = () => {
         }}
       >
         <source
-          src="../assets/jumpingjacklanding.mp4"
+          src="../public/jumpingjacklanding.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
