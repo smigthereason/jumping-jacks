@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Route, Routes, useNavigate, useLocation } from "react-router-dom";
 import "./App.css";
 import Loading from "./pages/Loading";
-// import Hero from "./pages/Hero";
 import Home from "./pages/Home";
 
 const App: React.FC = () => {
@@ -48,7 +47,7 @@ const App: React.FC = () => {
         }}
       >
         <source
-          src="../src/assets/jumpingjacklanding.mp4"
+          src="../assets/jumpingjacklanding.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
