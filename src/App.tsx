@@ -4,9 +4,6 @@ import "./App.css";
 import Loading from "./pages/Loading";
 import Hero from "./pages/Hero";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Portfolio from "./pages/Portfolio";
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -51,8 +48,7 @@ const App: React.FC = () => {
         }}
       >
         <source
-          src="https://cdn.pixabay.com/video/2021/11/20/98511-649310767_large.mp4"
-          // src="https://cdn.pixabay.com/video/2024/05/22/213026_large.mp4"
+          src="../src/assets/jumpingjacklanding.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
@@ -63,9 +59,6 @@ const App: React.FC = () => {
         <Route path="/" element={<Loading />} />
         <Route path="/start" element={<Hero />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/portfolio" element={<Portfolio />} />
       </Routes>
     </div>
   );

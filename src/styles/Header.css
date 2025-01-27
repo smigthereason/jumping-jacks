@@ -43,7 +43,7 @@ nav {
   display: flex;
   gap: 40px;
   position: relative;
-  right: 5vh;
+  right: 0vh;
   top: 5vh;
   color: #fff;
 }
