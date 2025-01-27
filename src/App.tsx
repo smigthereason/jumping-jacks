@@ -30,29 +30,7 @@ const App: React.FC = () => {
 
   return (
     <div style={{ position: "relative", width: "100%", height: "100vh" }}>
-      {/* Background video */}
-      <video
-        autoPlay
-        muted
-        loop
-        className="background-video"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover", // Ensure the video covers the entire screen
-          zIndex: -1, // Ensure the video stays behind other content
-        }}
-      >
-        <source
-          src="https://cdn.pixabay.com/video/2021/09/27/89894-616430996_large.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-
+      
       {/* Routes */}
       <Routes>
         <Route path="/" element={<Loading />} />

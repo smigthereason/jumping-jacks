@@ -19,6 +19,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden;
+  background-color: #1302198c;
 }
 
 /* For webkit-based browsers (Chrome, Safari, etc.) */
@@ -51,16 +52,7 @@ body {
 ::-webkit-scrollbar-button:horizontal {
   display: none;
 }
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
-}
+
 .right-section {
   width: 66.67%;
   height: 100vh;
@@ -71,17 +63,22 @@ body {
   overflow-x: hidden;
   padding: 10px;
 }
-.left-section1{
+.left-section1 {
   width: 33.33%;
   background-size: cover;
   overflow-x: hidden;
   overflow-y: hidden;
-
 }
-.left-section1 img{
+.left-section1 img {
   width: 100%;
   min-height: 100vh;
-  object-fit:inherit;
+  object-fit: inherit;
   position: relative;
   bottom: 40px;
+}
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+    background-color: #230a44a2;
+  }
 }

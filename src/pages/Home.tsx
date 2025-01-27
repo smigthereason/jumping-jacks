@@ -24,20 +24,20 @@ const Home: React.FC = () => {
   return (
     <>
       <div className="home-container" data-aos="zoom-out">
-        <video
-          autoPlay
-          muted
-          loop
-          className="background-video"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            objectFit: "cover", // Ensure the video covers the entire screen
-            zIndex: -1, // Ensure the video stays behind other content
-          }}
+      <video
+        autoPlay
+        muted
+        loop
+        className="background-video"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          zIndex: -1,
+        }}
         >
           <source src="https://cdn.pixabay.com/video/2021/09/27/89894-616430996_large.mp4" 
           type="video/mp4" />
@@ -48,13 +48,17 @@ const Home: React.FC = () => {
           <div className="scrollable-container">
             <div className="home_block" data-aos="fade-up" data-aos-delay="300">
               <div className="title_block">
-                <h2 className="title">
+                <p className="title">
                   Bounce, fall, repeat! Guide Jack, our clumsy pogo stick rider,
-                  through tricky obstacles on his way up. Jack's only goal to
+                  through tricky obstacles on his way up.
+                  <br /> Jack's only goal to
                   climb higher but no one knows what awaits at the top -a way
-                  out or an even greater mystery. But remember, one mistake
+                  out or an even greater mystery. 
+                  <br />But remember, one mistake
                   could send you tumbling all the way down!
-                </h2>
+                
+
+                </p>
               </div>
               <div className="house">
                 <div className="info-box-container">

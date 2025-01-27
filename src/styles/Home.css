@@ -157,6 +157,7 @@
 }
 
 @media (min-width: 1600px) {
+    
   h3 {
     font-size: 1.8rem;
   }
@@ -194,3 +195,102 @@
     font-size: 1.4rem;
   }
 }
+
+@media (max-width: 768px) {
+    .home-container {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      height: auto; /* Allow height to adjust based on content */
+      width: 100vw;
+      overflow-y: auto; /* Enable scrolling for smaller screens */
+      z-index: 100;
+    }
+  
+    .right-section1 {
+      width: 100%; /* Take full width in vertical layout */
+      height: auto; /* Adjust height to fit content */
+      background-color: #1302198c;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto; /* Allow scrolling within this section */
+      overflow-x: hidden;
+      padding: 10px;
+    }
+  
+    .left-section1 {
+      width: 100%; 
+      height: auto; 
+    }
+    .title {
+        font-family: "Mansalva", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 3.2vh;
+      }
+      .info-box-container {
+        width: 70vw;
+      }
+      .house {
+        position: relative;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        padding: 20px;
+        height: 40vh;
+      }
+      .splide {
+        position: relative;
+        bottom: 1vh;
+        height: 100vh;
+        width: 100vw;
+      }
+      
+      .slides .slide1 {
+        position: relative;
+        top: 0vh;
+        width: 100vw;
+        height: 50vh;
+        transform-origin: center;
+      }
+      
+      .slides .slide2 {
+        position: relative;
+        top: 40vh;
+        left: 4vw;
+        width: 100vw;
+        height: auto;
+        max-height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .slide-video {
+        position: relative;
+        top: 8vh;
+        width: 90%;
+        height: 90vh;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      
+      .slides .slide3 {
+        position: relative;
+        top: 25vh;
+        left: 2vw;
+        width: 95vw;
+        height: 100vh;
+        
+      }
+      
+      .slides .slide4 {
+        position: relative;
+        top: 5vh;
+        width: 100vw;
+        height: 80vh;
+        object-fit: cover;
+        border-radius: 10%;
+      }  
+  }
+  
