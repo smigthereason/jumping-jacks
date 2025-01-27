@@ -9,7 +9,7 @@ import "@splidejs/splide/dist/css/splide.min.css";
 import Button1 from "../components/Button1";
 import Button2 from "../components/Button2";
 import jj from "../assets/jj.png";
-import vid from "../assets/jumpingjacklanding.mp4";
+import vid from "../assets/jumpingjacklanding.webp";
 import one from "../assets/1.jpeg";
 import two from "../assets/2.jpeg";
 
@@ -75,11 +75,11 @@ const Home: React.FC = () => {
                 ></video>
               </SplideSlide>
               <SplideSlide>
-                <img src={one} alt="Slide 3" className="slide3" />
+                <img src={one} alt="Slide 2" className="slide3" />
               </SplideSlide>
 
               <SplideSlide>
-                <img src={two} alt="Slide 5" className="slide4" />
+                <img src={two} alt="Slide 3" className="slide4" />
               </SplideSlide>
             </Splide>
           </div>
