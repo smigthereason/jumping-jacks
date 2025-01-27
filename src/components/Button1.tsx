@@ -9,7 +9,7 @@ const Button: React.FC = () => {
 
   return (
     <button className="download-button" onClick={handleClick}>
-      Play
+      Play Game
     </button>
   );
 };

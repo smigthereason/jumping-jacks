@@ -10,7 +10,7 @@ const Header: React.FC = () => {
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
     e.preventDefault(); 
-    navigate("/start"); 
+    navigate("/"); 
   };
 
   return (
